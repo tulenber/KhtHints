@@ -1,0 +1,32 @@
+{
+    "khtHintsConfigs": [
+        {
+            "name" : "LoadingSceneHint",
+            "groupName": "default",
+            "strategy" : 1,
+            "updateTimeout" : 0
+        }
+    ],
+    "khtHintsData": [
+        {
+            "name" : "default",
+            "hints": [
+                "Default text 1",
+                "Default text 2",
+                "Default text 3",
+                "Default text 4",
+                "Default text 5"
+            ]
+        },
+        {
+            "name": "custom",
+            "hints": [
+                "Custom text 1",
+                "Custom text 2",
+                "Custom text 3",
+                "Custom text 4",
+                "Custom text 5"
+            ]
+        }
+    ]
+}
