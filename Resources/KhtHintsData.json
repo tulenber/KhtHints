@@ -1,31 +1,27 @@
 {
     "khtHintsConfigs": [
         {
-            "name" : "LoadingSceneHint",
-            "groupName": "default",
+            "hintName" : "LoadingSceneHint",
+            "usedGroupName": "default",
             "strategy" : 1,
             "updateTimeout" : 0
         }
     ],
-    "khtHintsData": [
+    "khtHintsGroupsData": [
         {
-            "name" : "default",
-            "hints": [
-                "Default text 1",
-                "Default text 2",
-                "Default text 3",
-                "Default text 4",
-                "Default text 5"
+            "groupName" : "default",
+            "hintsList": [
+                "default - group for default hints",
+                "hint with out name or config will show hints from default group"
             ]
         },
         {
-            "name": "custom",
-            "hints": [
-                "Custom text 1",
-                "Custom text 2",
-                "Custom text 3",
-                "Custom text 4",
-                "Custom text 5"
+            "groupName": "khtHintsConfigs",
+            "hintsList": [
+                "khtHintsConfigs - describe hint objects",
+                "groupName - describe from what group hint will be used",
+                "strategy - 0:Random hint, 1:Sequential",
+                "updateTimeout - update hint every N seconds, 0:no update"
             ]
         }
     ]

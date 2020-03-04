@@ -10,24 +10,24 @@ namespace KhtHints
     [Serializable] 
     class KhtHintConfig
     {
-        public string name = "";
-        public string groupName = "";
+        public string hintName = "";
+        public string usedGroupName = "";
         public KhtHintsStrategy strategy = 0;
         public int updateTimeout = 0;
     }
     
     [Serializable] 
-    class KhtHintsData
+    class KhtHintsGroupData
     {
-        public string name = null;
-        public List<string> hints = null;
+        public string groupName = null;
+        public List<string> hintsList = null;
     }
 
     [Serializable] 
     class KhtHintsListObject
     {
         public List<KhtHintConfig> khtHintsConfigs = null;
-        public List<KhtHintsData> khtHintsData = null;
+        public List<KhtHintsGroupData> khtHintsGroupsData = null;
     }
 
     public class KhtHintsManager : KhtSingleton<KhtHintsManager>
@@ -60,14 +60,14 @@ namespace KhtHints
             string jsonObject = mytxtData.text;
             KhtHintsListObject khtHintsObject = JsonUtility.FromJson<KhtHintsListObject>(jsonObject);
             
-            foreach (KhtHintsData hintsData in khtHintsObject.khtHintsData)
+            foreach (KhtHintsGroupData hintsGroupData in khtHintsObject.khtHintsGroupsData)
             {
-                _khtHintsData[hintsData.name] = hintsData.hints;
+                _khtHintsData[hintsGroupData.groupName] = hintsGroupData.hintsList;
             }
             
             foreach (KhtHintConfig hintsConfig in khtHintsObject.khtHintsConfigs)
             {
-                _khtHintsConfigs[hintsConfig.name] = hintsConfig;
+                _khtHintsConfigs[hintsConfig.hintName] = hintsConfig;
             }
         }
 
@@ -124,7 +124,7 @@ namespace KhtHints
             if (_khtHintsConfigs.ContainsKey(hintName))
             {
                 KhtHintConfig config = _khtHintsConfigs[hintName];
-                return GetHint(config.groupName, config.strategy);
+                return GetHint(config.usedGroupName, config.strategy);
             }
             
             Debug.Log("[KhtHintsManager] No config for hint field: " + hintName);
