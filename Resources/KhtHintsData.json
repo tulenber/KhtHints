@@ -11,17 +11,18 @@
         {
             "groupName" : "default",
             "hintsList": [
-                "default - group for default hints",
-                "hint with out name or config will show hints from default group"
+                "Default - group for the default hints.",
+                "Hint without name or config will show hints from the default group.",
+                "Strategy - 0:Random, 1:Sequential",
+                "UpdateTimeout - update hint every N seconds, 0:no update"
+
             ]
         },
         {
-            "groupName": "khtHintsConfigs",
+            "groupName": "custom",
             "hintsList": [
-                "khtHintsConfigs - describe hint objects",
-                "groupName - describe from what group hint will be used",
-                "strategy - 0:Random hint, 1:Sequential",
-                "updateTimeout - update hint every N seconds, 0:no update"
+                "Custom groups can be created.",
+                "To use custom group use their name in usedGroupName field from hint config block."
             ]
         }
     ]
