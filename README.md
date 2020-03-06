@@ -27,8 +27,11 @@ hintsList - list of hints
 
 # Usage
 Add Manager script to some object on loading; it uses the Singleton pattern.
+
 ![Manager script](https://kihontekina.dev/img/manager.png)
-Add Hint script to UI Text object; if you want to define hint group, adds a name to it.
+
+Add Hint script to UI Text object; if you want to define hint group, adds a name to it.  
+
 ![Hint script](https://kihontekina.dev/img/hint.png)
 
 # License
