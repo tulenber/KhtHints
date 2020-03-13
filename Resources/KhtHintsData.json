@@ -5,6 +5,12 @@
             "usedGroupName": "default",
             "strategy" : 1,
             "updateTimeout" : 0
+        },
+        {
+            "hintName" : "LoadingSceneHintTimeOut",
+            "usedGroupName": "default",
+            "strategy" : 1,
+            "updateTimeout" : 1
         }
     ],
     "khtHintsGroupsData": [
